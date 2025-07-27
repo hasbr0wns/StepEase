@@ -41,4 +41,6 @@ if st.button("💡 创建计划"):
             )
 
             output = response.choices[0].message.content
-            st.markdown(output)
+            output = output.replace("。", "。<br>")
+            st.markdown(output, unsafe_allow_html=True)
+        
