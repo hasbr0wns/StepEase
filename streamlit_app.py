@@ -40,5 +40,5 @@ if st.button("💡 创建计划"):
                 temperature=0.8
             )
 
-            output = response.chocies[0].message.content
+            output = response.choices[0].message.content
             st.markdown(output)
