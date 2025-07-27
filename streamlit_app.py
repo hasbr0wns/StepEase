@@ -30,7 +30,9 @@ if st.button("💡 创建计划"):
 用户输入：{user_input}
 """
 
-            openai.api_key = st.secrets["OPENAI_API_KEY"]
+            client = openai.OpenAI(
+                api_key=st.secrets["OPENAI_API_KEY"]
+            )
 
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
